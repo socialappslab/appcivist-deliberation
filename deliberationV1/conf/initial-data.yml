@@ -1,0 +1,45 @@
+# Deliberation Test Data
+---
+
+# Users
+  - &u1 !!models.User
+    _id:     1
+    name:      Bob
+    picture:   http://mrg.bz/RALWB2
+  - &u2 !!models.User
+    _id:     2
+    name:       Jane
+    picture:    http://mrg.bz/m9hGOE
+  - &u3 !!models.User
+    _id:     3
+    name:      John
+    picture:   http://mrg.bz/PKp55b
+  - &u4 !!models.User
+    _id:     4
+    name:       Marie
+    picture:    http://mrg.bz/f25ZXy
+  - &u5 !!models.User
+    _id:     5
+    name:      Anne
+    picture:   http://mrg.bz/Uab3rR
+  - &u6 !!models.User
+    _id:     6
+    name:       Michael
+    picture:    http://mrg.bz/t7c5V7
+  - &u7 !!models.User
+    _id:     7
+    name:      Rita
+    picture:   http://mrg.bz/ET70aQ
+  - &u8 !!models.User
+    _id:     8
+    name:       Sergio
+    picture:    http://mrg.bz/SQbwEh
+  - &u9 !!models.User
+    _id:     9
+    name:       Laura
+    picture:    http://mrg.bz/l381M4
+
+# Tags
+  - &t1 !!models.Tag
+    name:   update
+    type:   NEUTRAL
