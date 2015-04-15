@@ -2,40 +2,62 @@ package models;
 
 import play.db.ebean.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="appCivistUser")
 public class User extends Model{
 
     @Id
-    private Long _id;
-    private String name;
-    private String picture;
+    private Long userId;
+    private String userName;
+    private String userPicture;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    public List<Comment> userComments = new ArrayList<Comment>();
+
+    public User(String name, String picture){
+        this.userName = name;
+        this.userPicture = picture;
+    }
+
+    public static Finder<Long, User> find = new Finder<Long, User>(Long.class, User.class);
+
+    public static CommentCollection findAllCommentsByUser(Long id){
+        User user = find.ref(id);
+        List<Comment> comments = user.userComments;
+        CommentCollection commentCollection = new CommentCollection();
+        commentCollection.setComments(comments);
+        return commentCollection;
+    }
+
+    /*
+     * Getters and setters
+     */
 
     public Long get_id() {
-        return _id;
+        return userId;
     }
 
     public void set_id(Long _id) {
-        this._id = _id;
+        this.userId = _id;
     }
 
     public String getName() {
-        return name;
+        return userName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.userName = name;
     }
 
     public String getPicture() {
-        return picture;
+        return userPicture;
     }
 
     public void setPicture(String picture) {
-        this.picture = picture;
+        this.userPicture = picture;
     }
 }

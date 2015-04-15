@@ -4,52 +4,63 @@ import enums.ExternalResourceTypes;
 import play.db.ebean.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
 public class ExternalResource extends Model{
 
     @Id
-    private String _id;
+    @GeneratedValue
+    private String extResId;
     @NotNull
-    private String link;
-    private String alias;
+    private String extResLink;
+    private String extResAlias;
     @NotNull
-    private ExternalResourceTypes type;
-    @ManyToOne
-    private Comment comment;
+    private ExternalResourceTypes extResType;
+
+    public ExternalResource(String link, String alias, ExternalResourceTypes type) {
+        this.extResLink = link;
+        this.extResAlias = alias;
+        this.extResType = type;
+    }
+
+    /*
+     * Getters and setters
+     */
+
 
     public String get_id() {
-        return _id;
+        return extResId;
     }
 
     public void set_id(String _id) {
-        this._id = _id;
+        this.extResId = _id;
+
     }
 
     public String getLink() {
-        return link;
+        return extResLink;
     }
 
     public void setLink(String link) {
-        this.link = link;
+        this.extResLink = link;
     }
 
     public String getAlias() {
-        return alias;
+        return extResAlias;
     }
 
     public void setAlias(String alias) {
-        this.alias = alias;
+        this.extResAlias = alias;
     }
 
     public ExternalResourceTypes getType() {
-        return type;
+        return extResType;
     }
 
     public void setType(ExternalResourceTypes type) {
-        this.type = type;
+        this.extResType = type;
     }
 }

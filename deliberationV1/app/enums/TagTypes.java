@@ -1,5 +1,5 @@
 package enums;
 
 public enum TagTypes {
-    AGREE, DISAGREE, NEUTRAL
+    AGREE, NEUTRAL, DISAGREE, COMPLAINT
 }

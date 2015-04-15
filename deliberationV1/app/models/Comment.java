@@ -1,12 +1,11 @@
 package models;
 
+import com.avaje.ebean.ExpressionList;
 import play.db.ebean.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -15,36 +14,52 @@ import java.util.List;
 public class Comment extends Model {
 
     @Id
-    private Long _id;
-    @NotNull
-    private User user;
+    @GeneratedValue
+    private Long commentId;
     @NotNull
     private String comment;
     @NotNull
-    private Date date;
-    @OneToMany(mappedBy = "comment")
-    private List<Tag> tags;
-    @OneToMany(mappedBy = "comment", cascade = CascadeType.ALL)
-    private List<ExternalResource> externalResources;
+    private Date commentDate;
+    @ManyToMany
+    private List<Tag> commentTags = new ArrayList<Tag>();
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<ExternalResource> commentExternalResources = new ArrayList<ExternalResource>();
+
+    public Comment(String comment, Date date, List<Tag> tags, List<ExternalResource> externalResources) {
+        this.comment = comment;
+        this.commentDate = date;
+        this.commentTags = tags;
+        this.commentExternalResources = externalResources;
+    }
+
+    public static Finder<Long, Comment> find = new Finder<Long, Comment>(Long.class, Comment.class);
+
+    public static CommentCollection findAll() {
+        List<Comment> comments = find.all();
+        CommentCollection commentCollection = new CommentCollection();
+        commentCollection.setComments(comments);
+        return commentCollection;
+    }
+
+    public static Comment findById(Long id) {
+        return find.ref(id);
+    }
+
+    /*
+     * Getters and setters
+     */
 
     public Long get_id() {
-        return _id;
+        return commentId;
     }
 
     public void set_id(Long _id) {
-        this._id = _id;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
+        this.commentId = _id;
     }
 
     public String getComment() {
         return comment;
+
     }
 
     public void setComment(String comment) {
@@ -52,26 +67,26 @@ public class Comment extends Model {
     }
 
     public Date getDate() {
-        return date;
+        return commentDate;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.commentDate = date;
     }
 
     public List<Tag> getTags() {
-        return tags;
+        return commentTags;
     }
 
     public void setTags(List<Tag> tags) {
-        this.tags = tags;
+        this.commentTags = tags;
     }
 
     public List<ExternalResource> getExternalResources() {
-        return externalResources;
+        return commentExternalResources;
     }
 
     public void setExternalResources(List<ExternalResource> externalResources) {
-        this.externalResources = externalResources;
+        this.commentExternalResources = externalResources;
     }
 }
