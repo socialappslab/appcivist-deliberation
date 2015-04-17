@@ -1,6 +1,6 @@
 package models;
 
-import com.avaje.ebean.ExpressionList;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import play.db.ebean.*;
 
 import javax.persistence.*;
@@ -20,16 +20,21 @@ public class Comment extends Model {
     private String comment;
     @NotNull
     private Date commentDate;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Tag> commentTags = new ArrayList<Tag>();
     @ManyToMany(cascade = CascadeType.ALL)
     private List<ExternalResource> commentExternalResources = new ArrayList<ExternalResource>();
 
-    public Comment(String comment, Date date, List<Tag> tags, List<ExternalResource> externalResources) {
+    @JsonIgnore
+    @ManyToMany(mappedBy = "userComments")
+    private  List<User> user;
+
+    public Comment(String comment, Date date, List<Tag> tags, List<ExternalResource> externalResources, List<User> user) {
         this.comment = comment;
         this.commentDate = date;
         this.commentTags = tags;
         this.commentExternalResources = externalResources;
+        this.user = user;
     }
 
     public static Finder<Long, Comment> find = new Finder<Long, Comment>(Long.class, Comment.class);
@@ -42,7 +47,13 @@ public class Comment extends Model {
     }
 
     public static Comment findById(Long id) {
-        return find.ref(id);
+        Comment comment = find.ref(id);
+        return comment;
+    }
+
+    public static void delete(Long id) {
+        find.ref(id).deleteManyToManyAssociations("user");
+        find.ref(id).delete();
     }
 
     /*
@@ -51,6 +62,14 @@ public class Comment extends Model {
 
     public Long get_id() {
         return commentId;
+    }
+
+    public List<User> getUser() {
+        return user;
+    }
+
+    public void setUser(List<User> user) {
+        this.user = user;
     }
 
     public void set_id(Long _id) {

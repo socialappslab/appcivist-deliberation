@@ -23,4 +23,12 @@ public class Comments extends Controller{
         Comment comment = Comment.findById(id);
         return ok(Json.toJson(comment));
     }
+
+    /**
+     * Delete one comment
+     */
+    public static Result deleteComment(Long id) {
+        Comment.delete(id);
+        return redirect("/api/comments");
+    }
 }

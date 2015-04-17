@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Comment;
 import models.CommentCollection;
 import models.User;
 import play.libs.Json;

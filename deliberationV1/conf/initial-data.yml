@@ -74,250 +74,259 @@
     alias:  activism in Europe
     type: DOC
 
-# Comment
-  - &comment1 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 1994-11-05T08:15:30-05:00
-    tags:
-         - *greview
-         - *alternative
-    externalResources:
-                      - *img1
-                      - *img2
-                      - *doc1
-
-  - &comment2 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 1995-11-05T08:15:30-05:00
-    tags:
-         - *breview
-         - *disagree
-
-  - &comment3 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 1996-11-05T08:15:30-05:00
-    tags:
-         - *agree
-         - *improvement
-    externalResources:
-                      - *doc3
-                      - *video2
-
-  - &comment4 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 1997-11-05T08:15:30-05:00
-    tags:
-         - *greview
-         - *improvement
-    externalResources:
-                      - *web2
-                      - *sound1
-
-  - &comment5 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 1998-11-05T08:15:30-05:00
-    tags:
-         - *greview
-         - *alternative
-    externalResources:
-                      - *sound2
-                      - *web1
-
-  - &comment6 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 1999-11-05T08:15:30-05:00
-    tags:
-         - *greview
-         - *agree
-    externalResources:
-                      - *doc1
-                      - *web1
-                      - *img3
-
-  - &comment7 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2000-11-05T08:15:30-05:00
-    tags:
-         - *alternative
-    externalResources:
-                      - *sound1
-                      - *sound2
-
-  - &comment8 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2001-11-05T08:15:30-05:00
-    tags:
-         - *breview
-         - *alternative
-    externalResources:
-                      - *web2
-                      - *doc2
-
-  - &comment9 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2002-11-05T08:15:30-05:00
-    tags:
-         - *complaint
-    externalResources:
-                      - *web1
-
-  - &comment10 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2003-11-05T08:15:30-05:00
-    tags:
-         - *improvement
-         - *alternative
-    externalResources:
-                      - *web1
-                      - *img2
-
-  - &comment11 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2004-11-05T08:15:30-05:00
-    tags:
-         - *greview
-         - *alternative
-    externalResources:
-                      - *video1
-                      - *video2
-
-  - &comment12 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2005-11-05T08:15:30-05:00
-    tags:
-         - *agree
-         - *greview
-    externalResources:
-                      - *doc3
-
-  - &comment13 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2006-11-05T08:15:30-05:00
-    tags:
-         - *agree
-         - *improvement
-    externalResources:
-                      - *img2
-                      - *video2
-
-  - &comment14 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2007-11-05T08:15:30-05:00
-    tags:
-         - *breview
-         - *disagree
-    externalResources:
-                      - *doc1
-                      - *doc3
-
-  - &comment15 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2008-11-05T08:15:30-05:00
-    tags:
-         - *breview
-         - *disagree
-         - *alternative
-    externalResources:
-                      - *web1
-                      - *web2
-
-  - &comment16 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2009-11-05T08:15:30-05:00
-    tags:
-         - *complaint
-
-  - &comment17 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2010-11-05T08:15:30-05:00
-    tags:
-         - *greview
-         - *alternative
-
-  - &comment18 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2011-11-05T08:15:30-05:00
-    tags:
-         - *greview
-         - *alternative
-
-  - &comment19 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2012-11-05T08:15:30-05:00
-    tags:
-         - *greview
-         - *alternative
-
-  - &comment20 !!models.Comment
-    comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    date: 2013-11-05T08:15:30-05:00
-    tags:
-         - *agree
-         - *improvement
-
 # Users
   - &bob !!models.User
     _id:     1
     name:      Bob
     picture:   http://mrg.bz/RALWB2
     userComments:
-            - *comment1
-            - *comment7
-            - *comment3
+            - &comment1 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 1994-11-05T08:15:30-05:00
+                tags:
+                     - *greview
+                     - *alternative
+                externalResources:
+                                  - *img1
+                                  - *img2
+                                  - *doc1
+                user:
+                     - *bob
+            - &comment7 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2000-11-05T08:15:30-05:00
+                tags:
+                     - *alternative
+                externalResources:
+                                  - *sound1
+                                  - *sound2
+                user:
+                     - *bob
+            - &comment3 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 1996-11-05T08:15:30-05:00
+                tags:
+                     - *agree
+                     - *improvement
+                externalResources:
+                                  - *doc3
+                                  - *video2
+                user:
+                      - *bob
+
   - &jane !!models.User
     _id:     2
     name:       Jane
     picture:    http://mrg.bz/m9hGOE
     userComments:
-            - *comment2
-            - *comment20
+            - &comment2 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 1995-11-05T08:15:30-05:00
+                tags:
+                     - *breview
+                     - *disagree
+                user:
+                     - *jane
+            - &comment20 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2013-11-05T08:15:30-05:00
+                tags:
+                     - *agree
+                     - *improvement
+                user:
+                    - *jane
+
   - &john !!models.User
     _id:     3
     name:      John
     picture:   http://mrg.bz/PKp55b
     userComments:
-            - *comment6
-            - *comment19
+            - &comment6 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 1999-11-05T08:15:30-05:00
+                tags:
+                     - *greview
+                     - *agree
+                externalResources:
+                                  - *doc1
+                                  - *web1
+                                  - *img3
+                user:
+                      - *john
+            - &comment19 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2012-11-05T08:15:30-05:00
+                tags:
+                     - *greview
+                     - *alternative
+                user:
+                     - *john
+
   - &marie !!models.User
     _id:     4
     name:       Marie
     picture:    http://mrg.bz/f25ZXy
     userComments:
-            - *comment5
-            - *comment8
+            - &comment5 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 1998-11-05T08:15:30-05:00
+                tags:
+                     - *greview
+                     - *alternative
+                externalResources:
+                                  - *sound2
+                                  - *web1
+                user:
+                      - *marie
+
+            - &comment8 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2001-11-05T08:15:30-05:00
+                tags:
+                     - *breview
+                     - *alternative
+                externalResources:
+                                  - *web2
+                                  - *doc2
+                user:
+                      - *marie
+
   - &anne !!models.User
     _id:     5
     name:      Anne
     picture:   http://mrg.bz/Uab3rR
     userComments:
-            - *comment18
-            - *comment9
+            - &comment18 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2011-11-05T08:15:30-05:00
+                tags:
+                     - *greview
+                     - *alternative
+                user:
+                     - *anne
+            - &comment9 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2002-11-05T08:15:30-05:00
+                tags:
+                     - *complaint
+                externalResources:
+                                  - *web1
+                user:
+                     - *anne
+
   - &michael !!models.User
     _id:     6
     name:       Michael
     picture:    http://mrg.bz/t7c5V7
     userComments:
-            - *comment11
-            - *comment4
+            - &comment11 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2004-11-05T08:15:30-05:00
+                tags:
+                     - *greview
+                     - *alternative
+                externalResources:
+                                  - *video1
+                                  - *video2
+                user:
+                     - *michael
+            - &comment4 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 1997-11-05T08:15:30-05:00
+                tags:
+                     - *greview
+                     - *improvement
+                externalResources:
+                                  - *web2
+                                  - *sound1
+                user:
+                     - *michael
+
   - &rita !!models.User
     _id:     7
     name:      Rita
     picture:   http://mrg.bz/ET70aQ
     userComments:
-            - *comment10
-            - *comment12
+            - &comment10 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2003-11-05T08:15:30-05:00
+                tags:
+                     - *improvement
+                     - *alternative
+                externalResources:
+                                  - *web1
+                                  - *img2
+                user:
+                     - *rita
+            - &comment12 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2005-11-05T08:15:30-05:00
+                tags:
+                     - *agree
+                     - *greview
+                externalResources:
+                                  - *doc3
+                user:
+                     - *rita
+
   - &sergio !!models.User
     _id:     8
     name:       Sergio
     picture:    http://mrg.bz/SQbwEh
     userComments:
-            - *comment17
-            - *comment13
+            - &comment17 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2010-11-05T08:15:30-05:00
+                tags:
+                     - *greview
+                     - *alternative
+                user:
+                     - *sergio
+            - &comment13 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2006-11-05T08:15:30-05:00
+                tags:
+                     - *agree
+                     - *improvement
+                externalResources:
+                                  - *img2
+                                  - *video2
+                user:
+                     - *sergio
+
   - &laura !!models.User
     _id:     9
     name:       Laura
     picture:    http://mrg.bz/l381M4
     userComments:
-            - *comment14
-            - *comment16
-            - *comment15
+            - &comment14 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2007-11-05T08:15:30-05:00
+                tags:
+                     - *breview
+                     - *disagree
+                externalResources:
+                                  - *doc1
+                                  - *doc3
+                user:
+                     - *laura
+            - &comment15 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2008-11-05T08:15:30-05:00
+                tags:
+                     - *breview
+                     - *disagree
+                     - *alternative
+                externalResources:
+                                  - *web1
+                                  - *web2
+                user:
+                         - *laura
+            - &comment16 !!models.Comment
+                comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                date: 2009-11-05T08:15:30-05:00
+                tags:
+                     - *complaint
+                user:
+                         - *laura
+

@@ -3,13 +3,15 @@
 # ~~~~
 
 # Home page
-GET        /                            controllers.Application.index
+GET           /                            controllers.Application.index
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file                controllers.Assets.at(path="/public", file)
+GET           /assets/*file                controllers.Assets.at(path="/public", file)
 
 
 # Comments API
-GET        /api/comments                controllers.Comments.findComments()
-GET        /api/comment/:id             controllers.Comments.findCommentById(id: Long)
-GET        /api/comments/:userId        controllers.Users.findCommentsByUser(userId: Long)
+GET           /api/comments                controllers.Comments.findComments()
+GET           /api/comment/:id             controllers.Comments.findCommentById(id: Long)
+GET           /api/comments/:userId        controllers.Users.findCommentsByUser(userId: Long)
+DELETE        /api/comment/:id             controllers.Comments.deleteComment(id: Long)
+

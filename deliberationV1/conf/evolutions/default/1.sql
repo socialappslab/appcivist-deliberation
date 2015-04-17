@@ -82,13 +82,13 @@ drop table if exists comment_tag cascade;
 
 drop table if exists comment_external_resource cascade;
 
+drop table if exists appCivistUser_comment cascade;
+
 drop table if exists external_resource cascade;
 
 drop table if exists tag cascade;
 
 drop table if exists appCivistUser cascade;
-
-drop table if exists appCivistUser_comment cascade;
 
 drop sequence if exists comment_seq;
 

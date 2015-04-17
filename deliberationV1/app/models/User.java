@@ -60,4 +60,12 @@ public class User extends Model{
     public void setPicture(String picture) {
         this.userPicture = picture;
     }
+
+    public List<Comment> getUserComments() {
+        return userComments;
+    }
+
+    public void setUserComments(List<Comment> userComments) {
+        this.userComments = userComments;
+    }
 }
