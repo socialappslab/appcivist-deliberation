@@ -102,6 +102,7 @@
                                   - *sound2
                 user:
                      - *bob
+
             - &comment3 !!models.Comment
                 comment: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 date: 1996-11-05T08:15:30-05:00

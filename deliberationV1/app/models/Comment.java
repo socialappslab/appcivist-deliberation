@@ -47,7 +47,7 @@ public class Comment extends Model {
     }
 
     public static Comment findById(Long id) {
-        Comment comment = find.ref(id);
+        Comment comment = find.byId(id);
         return comment;
     }
 

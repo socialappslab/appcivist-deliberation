@@ -26,7 +26,7 @@ public class User extends Model{
     public static Finder<Long, User> find = new Finder<Long, User>(Long.class, User.class);
 
     public static CommentCollection findAllCommentsByUser(Long id){
-        User user = find.ref(id);
+        User user = find.byId(id);
         List<Comment> comments = user.userComments;
         CommentCollection commentCollection = new CommentCollection();
         commentCollection.setComments(comments);
