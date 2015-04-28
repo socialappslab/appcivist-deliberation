@@ -10,10 +10,14 @@ deliberationControllers.controller('Ctrl', function($scope,$location){
     };
 });
 
-deliberationControllers.controller('CommentsListCtrl', function($scope, $http) {
-    $http.get('../../public/app/comments/comments.json').success(function(data){
-        $scope.comments = data;
-    }).error(function(error){
-        console.log('Error loading data' + error);
-    });
+deliberationControllers.controller('CommentsListCtrl', function($scope, Comments) {
+    $scope.comments = Comments.query();
 });
+
+deliberationControllers.controller('CommentCtrl', ['$scope', '$routeParams', 'Comment', function($scope, $routeParams, Comment){
+    $scope.comment = Comment.query({id:$routeParams._id});
+}]);
+
+deliberationControllers.controller('CommentsListByUserCtrl', ['$scope','$routeParams', 'CommentsByUser', function($scope, $routeParams, CommentsByUser) {
+    $scope.comments = CommentsByUser.query({userId:$routeParams._id});
+}]);

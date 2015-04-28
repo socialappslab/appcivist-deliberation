@@ -62,17 +62,21 @@ body {
   font-size: 0.8em;
   cursor: pointer;
 }
-.tag.red {
-  border: 1px solid rgba(255, 24, 42, 0.49);
-  background: rgba(255, 24, 42, 0.49);
+.tag.COMPLAINT {
+  border: 1px solid rgba(255, 24, 42, 0.6);
+  background: rgba(255, 24, 42, 0.6);
 }
-.tag.blue {
-  border: 1px solid rgba(57, 143, 255, 0.49);
-  background: rgba(57, 143, 255, 0.49);
+.tag.DISAGREE {
+  border: 1px solid rgba(255, 112, 37, 0.6);
+  background: rgba(255, 112, 37, 0.6);
 }
-.tag.yellow {
-  border: 1px solid rgba(255, 225, 106, 0.49);
-  background: rgba(255, 225, 106, 0.49);
+.tag.NEUTRAL {
+  border: 1px solid rgba(57, 143, 255, 0.6);
+  background: rgba(57, 143, 255, 0.6);
+}
+.tag.AGREE {
+  border: 1px solid rgba(78, 255, 72, 0.6);
+  background: rgba(78, 255, 72, 0.6);
 }
 
 /*# sourceMappingURL=app.css.map */

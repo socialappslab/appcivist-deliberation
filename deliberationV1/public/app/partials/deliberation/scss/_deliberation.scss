@@ -48,18 +48,23 @@
     font-size: 0.8em;
     cursor: pointer;
 
-    &.red{
-      border: 1px solid rgba(255, 24, 42, 0.49);
-      background: rgba(255, 24, 42, 0.49);
+    &.COMPLAINT{
+      border: 1px solid rgba(255, 24, 42, 0.60);
+      background: rgba(255, 24, 42, 0.60);
     }
 
-    &.blue{
-      border: 1px solid rgba(57, 143, 255, 0.49);
-      background: rgba(57, 143, 255, 0.49);
+    &.DISAGREE{
+      border: 1px solid rgba(255, 112, 37, 0.60);
+      background: rgba(255, 112, 37, 0.60);
     }
 
-    &.yellow{
-      border: 1px solid rgba(255, 225, 106, 0.49);
-      background: rgba(255, 225, 106, 0.49);
+    &.NEUTRAL{
+      border: 1px solid rgba(57, 143, 255, 0.6);
+      background: rgba(57, 143, 255, 0.6);
+    }
+
+    &.AGREE{
+      border: 1px solid rgba(78, 255, 72, 0.6);
+      background: rgba(78, 255, 72, 0.6);
     }
   }

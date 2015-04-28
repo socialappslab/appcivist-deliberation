@@ -13,16 +13,17 @@
         <script src="../../public/bower_components/angular-resource/angular-resource.js"></script>
         <script src="../../public/app/js/app.js"></script>
         <script src="../../public/app/js/controllers.js"></script>
+        <script src="../../public/app/js/services.js"></script>
     </head>
 
     <body ng-controller="Ctrl">
 
         <div class="container">
-            <div class="header clearfix">
-                <h3 class="text-muted">Deliberation Mockup</h3>
-            </div>
             <div ng-switch on="getUrl()">
                 <div ng-switch-when="/deliberation">
+                    <div class="header clearfix">
+                        <h3 class="text-muted">Deliberation Mockup</h3>
+                    </div>
                     <div ng-include="'../../public/app/partials/proposal/proposal.html'"></div>
                 </div>
             </div>

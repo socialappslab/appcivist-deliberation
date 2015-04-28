@@ -25,7 +25,6 @@ public class Comment extends Model {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<ExternalResource> commentExternalResources = new ArrayList<ExternalResource>();
 
-    @JsonIgnore
     @ManyToMany(mappedBy = "userComments")
     private  List<User> user;
 

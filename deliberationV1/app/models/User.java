@@ -1,5 +1,6 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import play.db.ebean.Model;
 
 import javax.persistence.*;
@@ -15,6 +16,7 @@ public class User extends Model{
     private String userName;
     private String userPicture;
 
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     public List<Comment> userComments = new ArrayList<Comment>();
 
