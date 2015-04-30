@@ -4,7 +4,7 @@
 
 var deliberationServices = angular.module('deliberationServices', ['ngResource']);
 
-deliberationServices.factory('Comments', ['$resource',
+deliberationServices.factory('CommentsList', ['$resource',
     function($resource){
         return $resource('api/comments', {}, {
             query: {method: 'GET'}
@@ -22,5 +22,12 @@ deliberationServices.factory('CommentsByUser', ['$resource',
     function($resource){
         return $resource('api/comments/:userId', {}, {
             query: {method: 'GET', params:{userId: '@userId'}}
+        });
+    }]);
+
+deliberationServices.factory('PostComment', ['$resource',
+    function($resource){
+        return $resource('api/comment/:id&:comment', {}, {
+            query: {method: 'POST', params:{id: '@id', comment: '@comment'}}
         });
     }]);

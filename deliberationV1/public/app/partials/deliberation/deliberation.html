@@ -1,6 +1,15 @@
 <section id="deliberation" class="row comments">
     <div class="col-md-12">
         <ul class="comments">
+            <li class="row comment">
+                <div class="image-profile-comment col-md-1">
+                    <img ng-src="http://cdn.morguefile.com/imageData/public/files/o/Oleander/12/l/1418846725d5h3t.jpg" alt="" />
+                </div>
+                <div class="col-md-11">
+                    <div text-angular="" ng-model="comment"></div>
+                    <button type="button" class="btn btn-primary pull-right row" ng-click="update(comment)">Save</button>
+                </div>
+            </li>
             <li class="row comment" ng-repeat="comment in comments.comments | orderBy: 'date'">
                 <div class="image-profile-comment col-md-1">
                     <img ng-src="{{comment.user[0].picture}}" alt="" />

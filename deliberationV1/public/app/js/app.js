@@ -4,12 +4,13 @@
 
 var deliberationApp = angular.module('deliberationApp', [
     'ngRoute',
+    'textAngular',
     'deliberationControllers',
     'deliberationServices'
 ]);
 
-deliberationApp.config(['$routeProvider',
-    function($routeProvider) {
+deliberationApp.config(['$routeProvider', '$provide',
+    function($routeProvider, $provide) {
         $routeProvider.
             when('/deliberation', {
                 templateUrl: '../../public/app/partials/deliberation/deliberation.html',
@@ -23,5 +24,14 @@ deliberationApp.config(['$routeProvider',
                 templateUrl: '../../public/app/partials/deliberation/userComments.html',
                 controller: 'CommentsListByUserCtrl'
             });
+
+        $provide.decorator('taOptions', ['taRegisterTool', '$delegate', function(taRegisterTool, taOptions){ // $delegate is the taOptions we are decorating
+            taOptions.toolbar = [
+                ['h1', 'h2', 'h3', 'p', 'quote'],
+                ['bold', 'italics', 'underline', 'strikeThrough', 'ul', 'ol',],
+                ['html', 'insertImage','insertLink', 'insertVideo']
+            ];
+            return taOptions;
+        }]);
     }
 ]);
