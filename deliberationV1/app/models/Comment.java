@@ -55,6 +55,16 @@ public class Comment extends Model {
         find.ref(id).delete();
     }
 
+    public static void saveComment(Long userId, String comment){
+        Date commmentDate = new Date();
+        User user = User.findById(userId);
+        List<User> users = new ArrayList<User>();
+        users.add(user);
+        Comment newComment = new Comment(comment,commmentDate,null,null,users);
+        newComment.save();
+        newComment.refresh();
+    }
+
     /*
      * Getters and setters
      */

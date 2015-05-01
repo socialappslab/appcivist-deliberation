@@ -27,7 +27,7 @@ deliberationServices.factory('CommentsByUser', ['$resource',
 
 deliberationServices.factory('PostComment', ['$resource',
     function($resource){
-        return $resource('api/comment/:id&:comment', {}, {
+        return $resource('api/comment/:id/:comment', {}, {
             query: {method: 'POST', params:{id: '@id', comment: '@comment'}}
         });
     }]);

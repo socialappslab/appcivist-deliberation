@@ -35,6 +35,11 @@ public class User extends Model{
         return commentCollection;
     }
 
+    public static User findById(Long id){
+        User user = find.byId(id);
+        return user;
+    }
+
     /*
      * Getters and setters
      */
