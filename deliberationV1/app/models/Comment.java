@@ -55,12 +55,21 @@ public class Comment extends Model {
         find.ref(id).delete();
     }
 
-    public static void saveComment(Long userId, String comment){
+    public static void saveComment(Long userId, String comment/*, Long commentId*/){
         Date commmentDate = new Date();
         User user = User.findById(userId);
         List<User> users = new ArrayList<User>();
         users.add(user);
-        Comment newComment = new Comment(comment,commmentDate,null,null,users);
+        Comment newComment;
+        /*if(commentId != null){
+            newComment = find.byId(commentId);
+            newComment.setComment(comment);
+            newComment.setDate(commmentDate);
+        }
+        else {
+            newComment = new Comment(comment,commmentDate,null,null,users);
+        }*/
+        newComment = new Comment(comment,commmentDate,null,null,users);
         newComment.save();
         newComment.refresh();
     }
